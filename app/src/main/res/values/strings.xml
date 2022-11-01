@@ -1,7 +1,21 @@
 <resources>
     <string name="app_name">CryptocurrencyCourses</string>
+
+
+
+    <!--CRYPTOCURRENCIES-->
     <string name="title_cryptocurrencies">Cryptocurrencies</string>
+    <string name="price">Price</string>
+    <string name="total_volume">Total volume</string>
+    <string name="high_24h">High 24H</string>
+    <string name="low_24h">Low 24H</string>
+    <string name="ath">ATH</string>
+    <string name="atl">ATL</string>
+
+    <!--CALCULATOR-->
     <string name="title_calculator">Calculator</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--CONTENT DESCRIPTION-->
+    <string name="cd_image_item_crypto">image item crypto</string>
+
 </resources>
