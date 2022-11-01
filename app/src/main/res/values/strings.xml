@@ -14,6 +14,9 @@
 
     <!--CALCULATOR-->
     <string name="title_calculator">Calculator</string>
+    <string name="choose_crypto">Choose an cryptocurrency</string>
+    <string name="count">Count</string>
+    <string name="enter_valid_data">Enter valid data</string>
 
     <!--CONTENT DESCRIPTION-->
     <string name="cd_image_item_crypto">image item crypto</string>

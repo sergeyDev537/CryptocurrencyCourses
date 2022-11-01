@@ -14,11 +14,16 @@ import kotlinx.coroutines.launch
 
 class CryptoViewModel(application: Application): AndroidViewModel(application) {
 
-    var job: Job? = null
     var retrofitService: RetrofitService = RetrofitService.getInstance(getApplication<Application>())
     private val _listCrypto = MutableLiveData<List<CryptoModel>>()
     val listCrypto: LiveData<List<CryptoModel>>
         get() = _listCrypto
+    private val _fiat = MutableLiveData<String>()
+    val fiat: LiveData<String>
+        get() = _fiat
+    val inputCountValue = MutableLiveData<String>()
+    val inputCryptocurrency = MutableLiveData<CryptoModel>()
+
 
     init {
         getTop100Cryptocurrencies()
@@ -33,6 +38,16 @@ class CryptoViewModel(application: Application): AndroidViewModel(application) {
             )
             _listCrypto.postValue(response)
         }
+    }
+
+    fun calculateCryptoToFiat(count: String, cryptoModel: CryptoModel?){
+        val number = count.toDouble()
+
+            if (cryptoModel != null) {
+                _fiat.value = (number*cryptoModel.currentPrice).toString()
+            }
+
+
     }
 
 
